@@ -34,6 +34,10 @@ PlaygroundPage.current.liveView = canvas
 To use the Tortoise abstraction, just create an instance of the Tortoise class, and provide it with a canvas object that is should draw upon.
 */
 
+// Draw a grid
+canvas.drawAxes(withScale: true, by: 20, color: .black)
+
+// Create a turtle will draw upon the
 // Create a turtle that will draw upon the canvas
 let turtle = Tortoise(drawingUpon: canvas)
 
@@ -249,13 +253,25 @@ turtle.currentPosition()
 // Set scale
 let scale = 20
 
+// FUNCTIONS
+func whereAmI() {
+    // Where are we?
+    turtle.drawSelf()
+    turtle.currentPosition()
+    turtle.currentHeading()
+}
+
 // MOVE MORE TO THE MIDDLE
 turtle.penUp()
 turtle.forward(steps: 5 * scale)
 turtle.left(by: 90)
 turtle.forward(steps: 5 * scale)
 turtle.right(by: 90)
+
+// Where are we?
 turtle.drawSelf()
+turtle.currentPosition()
+turtle.currentHeading()
 
 // DRAW ARROW
 // Draw a line
