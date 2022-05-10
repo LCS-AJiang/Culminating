@@ -56,115 +56,51 @@ let scale = 30
 
  */
 // Begin writing your code below (you can remove the examples shown)
-// Draw bottom shape
-turtle.forward(steps: 2 * scale)
-//turtle.drawSelf()
 
-// Up 1/3
-turtle.left(by: 120)
-turtle.forward(steps: scale/3)
-//turtle.drawSelf()
+func drawParallelogram() {
+    // DRAW PARALLELOGRAM
 
-// Forward 2
-turtle.left(by: 60)
-turtle.forward(steps: 2 * scale)
-//turtle.drawSelf()
+    // Draw bottom shape
+    turtle.currentHeading()
+    turtle.currentPosition()
 
-// Down 1/3
-turtle.left(by: 120)
-turtle.forward(steps: scale/3)
-//turtle.drawSelf()
-turtle.penUp()
-turtle.setPosition(to: Point(x: -5.5, y: 10))
-turtle.penDown()
+    turtle.forward(steps: 2 * scale)
+    //turtle.drawSelf()
 
-// Loop for a single pattern
-turtle.right(by: 180)
-turtle.forward(steps: scale/3)
-//turtle.drawSelf()
+    // Up 1/3
+    turtle.left(by: 120)
+    turtle.forward(steps: scale/3)
+    //turtle.drawSelf()
 
-turtle.right(by: 120)
-turtle.forward(steps: 2 * scale)
-//turtle.drawSelf()
+    // Forward 2
+    turtle.left(by: 60)
+    turtle.forward(steps: 2 * scale)
+    //turtle.drawSelf()
 
-turtle.right(by: 60)
-turtle.forward(steps: scale/3)
+    // Down 1/3
+    turtle.left(by: 120)
+    turtle.forward(steps: scale/3)
+    turtle.left(by: 60)
 
-turtle.penUp()
-turtle.setPosition(to: Point(x: -10.5, y: 20))
-turtle.penDown()
+    turtle.currentHeading()
+    turtle.currentPosition()
 
-// Loop for a single pattern
-turtle.right(by: 180)
-turtle.forward(steps: scale/3)
-//turtle.drawSelf()
+}
 
-turtle.right(by: 120)
-turtle.forward(steps: 2 * scale)
-//turtle.drawSelf()
 
-turtle.right(by: 60)
-turtle.forward(steps: scale/3)
+for _ in 1...6 {
+    // draw parallelogram
+    drawParallelogram()
 
-turtle.penUp()
-turtle.setPosition(to: Point(x: -15.5, y: 30))
-turtle.penDown()
+    // GET INTO POSITION TO DRAW THE NEXT PARALLELOGRAM
+    turtle.penUp()
+    turtle.left(by: 120)
+    turtle.forward(steps: scale/3)
+    turtle.right(by: 120)
+    turtle.penDown()
+}
 
-// Loop for a single pattern
-turtle.right(by: 180)
-turtle.forward(steps: scale/3)
-//turtle.drawSelf()
 
-turtle.right(by: 120)
-turtle.forward(steps: 2 * scale)
-//turtle.drawSelf()
+// WHERE AM I
+turtle.drawSelf()
 
-turtle.right(by: 60)
-turtle.forward(steps: scale/3)
-
-turtle.penUp()
-turtle.setPosition(to: Point(x: -20.5, y: 40))
-turtle.penDown()
-
-// Loop for a single pattern
-turtle.right(by: 180)
-turtle.forward(steps: scale/3)
-//turtle.drawSelf()
-
-turtle.right(by: 120)
-turtle.forward(steps: 2 * scale)
-//turtle.drawSelf()
-
-turtle.right(by: 60)
-turtle.forward(steps: scale/3)
-
-turtle.penUp()
-turtle.setPosition(to: Point(x: -25.5, y: 50))
-turtle.penDown()
-
-// Loop for a single pattern
-turtle.right(by: 180)
-turtle.forward(steps: scale/3)
-//turtle.drawSelf()
-
-turtle.right(by: 120)
-turtle.forward(steps: 2 * scale)
-//turtle.drawSelf()
-
-turtle.right(by: 60)
-turtle.forward(steps: scale/3)
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
-
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
