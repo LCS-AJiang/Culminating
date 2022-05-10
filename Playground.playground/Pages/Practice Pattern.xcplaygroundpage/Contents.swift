@@ -88,19 +88,88 @@ func drawParallelogram() {
 }
 
 
-for _ in 1...6 {
-    // draw parallelogram
-    drawParallelogram()
+func sixPattern() {
+    for _ in 1...6 {
+        // draw parallelogram
+        drawParallelogram()
 
-    // GET INTO POSITION TO DRAW THE NEXT PARALLELOGRAM
-    turtle.penUp()
-    turtle.left(by: 120)
-    turtle.forward(steps: scale/3)
-    turtle.right(by: 120)
-    turtle.penDown()
+        // GET INTO POSITION TO DRAW THE NEXT PARALLELOGRAM
+        turtle.penUp()
+        turtle.left(by: 120)
+        turtle.forward(steps: scale/3)
+        turtle.right(by: 120)
+        turtle.penDown()
+    }
 }
 
 
-// WHERE AM I
-turtle.drawSelf()
+func finalPattern() {
+    turtle.currentPosition()
+    turtle.currentHeading()
+    sixPattern()
+    turtle.drawSelf()
+    turtle.currentPosition()
+    turtle.currentHeading()
 
+    // Lefttop sixPattern
+    turtle.left(by: 60)
+    turtle.forward(steps: 2 * scale)
+    turtle.right(by: 180)
+    sixPattern()
+    turtle.drawSelf()
+
+    // Middle sixPattern
+    turtle.forward(steps: 2 * scale)
+    turtle.left(by: 60)
+    sixPattern()
+    turtle.drawSelf()
+
+    // Righttop
+    turtle.forward(steps: 2 * scale)
+    turtle.left(by: 60)
+    sixPattern()
+    turtle.drawSelf()
+
+    // Right corner
+    turtle.right(by: 60)
+    turtle.forward(steps: 2 * scale)
+    turtle.right(by: 60)
+    sixPattern()
+    turtle.drawSelf()
+}
+
+// Make repetition for the pattern
+for _ in 1...3 {
+    turtle.currentPosition()
+    turtle.currentHeading()
+    sixPattern()
+    turtle.drawSelf()
+    turtle.currentPosition()
+    turtle.currentHeading()
+
+    // Lefttop sixPattern
+    turtle.left(by: 60)
+    turtle.forward(steps: 2 * scale)
+    turtle.right(by: 180)
+    sixPattern()
+    turtle.drawSelf()
+
+    // Middle sixPattern
+    turtle.forward(steps: 2 * scale)
+    turtle.left(by: 60)
+    sixPattern()
+    turtle.drawSelf()
+
+    // Righttop
+    turtle.forward(steps: 2 * scale)
+    turtle.left(by: 60)
+    sixPattern()
+    turtle.drawSelf()
+
+    // Right corner
+    turtle.right(by: 60)
+    turtle.forward(steps: 2 * scale)
+    turtle.right(by: 60)
+    sixPattern()
+    turtle.drawSelf()
+}
