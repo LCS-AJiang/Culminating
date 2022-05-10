@@ -1,3 +1,5 @@
+/*
+
 //: [Previous](@previous) / [Next](@next)
 //: # Tortoise Examples
 //:
@@ -254,12 +256,11 @@ turtle.currentPosition()
 let scale = 20
 
 // FUNCTIONS
-func whereAmI() {
+
     // Where are we?
     turtle.drawSelf()
     turtle.currentPosition()
     turtle.currentHeading()
-}
 
 // MOVE MORE TO THE MIDDLE
 turtle.penUp()
@@ -269,9 +270,7 @@ turtle.forward(steps: 5 * scale)
 turtle.right(by: 90)
 
 // Where are we?
-turtle.drawSelf()
-turtle.currentPosition()
-turtle.currentHeading()
+
 
 // DRAW ARROW
 // Draw a line
@@ -311,6 +310,13 @@ turtle.right(by: 90)
 turtle.forward(steps: 2 * scale)
 turtle.drawSelf()
 
+// Correct for position
+turtle.penUp()
+turtle.left(by: 90)
+turtle.forward(steps: 1)
+turtle.right(by: 90)
+turtle.penDown()
+
 /*:
  ## Show the Assistant Editor
  Don't see any results?
@@ -326,3 +332,5 @@ turtle.drawSelf()
  
  ![source_control](source-control.png "Source Control")
  */
+
+*/
