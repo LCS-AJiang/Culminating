@@ -246,19 +246,4 @@ for _ in 1...3 {
     turtle.currentHeading()
 }
 
-//// Repetition for the pattern vertically
-//for _ in 1...3 {
-//    turtle.forward(steps: -16 * scale)
-//
-//}
-
-//// Get into position for next copy of pattern
-//turtle.forward(steps: 8 * scale)
-//wholePattern()
-//turtle.currentPosition()
-//turtle.currentHeading()
-//
-//// Get into position for the third copy of pattern
-//turtle.forward(steps: 8 * scale)
-
 canvas.highPerformance = false
