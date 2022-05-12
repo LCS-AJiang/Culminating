@@ -38,7 +38,7 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
+canvas.translate(to: Point(x: 50,
                            y: canvas.height / 2))
 
 // Show a grid
@@ -103,7 +103,7 @@ func sixPattern() {
 }
 
 
-func finalPattern() {
+func threeRepeatsOfPattern() {
     turtle.currentPosition()
     turtle.currentHeading()
     sixPattern()
@@ -136,40 +136,87 @@ func finalPattern() {
     turtle.right(by: 60)
     sixPattern()
     turtle.drawSelf()
+}
+
+func wholePattern() {
+    turtle.currentHeading()
+    turtle.currentPosition()
+    for _ in 1...3{
+        turtle.currentPosition()
+        turtle.currentHeading()
+        sixPattern()
+        turtle.drawSelf()
+        turtle.currentPosition()
+        turtle.currentHeading()
+
+        // Lefttop sixPattern
+        turtle.left(by: 60)
+        turtle.forward(steps: 2 * scale)
+        turtle.right(by: 180)
+        sixPattern()
+        turtle.drawSelf()
+
+        // Middle sixPattern
+        turtle.forward(steps: 2 * scale)
+        turtle.left(by: 60)
+        sixPattern()
+        turtle.drawSelf()
+
+        // Righttop
+        turtle.forward(steps: 2 * scale)
+        turtle.left(by: 60)
+        sixPattern()
+        turtle.drawSelf()
+
+        // Right corner
+        turtle.right(by: 60)
+        turtle.forward(steps: 2 * scale)
+        turtle.right(by: 60)
+        sixPattern()
+        turtle.drawSelf()
+    }
+    turtle.currentHeading()
+    turtle.currentPosition()
+    turtle.left(by: -32040)
+    turtle.currentHeading()
+
 }
 
 // Make repetition for the pattern
+canvas.highPerformance = true
+
+
+//// Draw the pattern
+//turtle.currentHeading()
+//turtle.currentPosition()
+//wholePattern()
+//turtle.currentPosition()
+//turtle.currentHeading()
+
+// Repetition for the pattern horizontally
 for _ in 1...3 {
+    // Draw the pattern
+    turtle.forward(steps: 8 * scale)
+    turtle.currentHeading()
+    turtle.currentPosition()
+    wholePattern()
     turtle.currentPosition()
     turtle.currentHeading()
-    sixPattern()
-    turtle.drawSelf()
-    turtle.currentPosition()
-    turtle.currentHeading()
-
-    // Lefttop sixPattern
-    turtle.left(by: 60)
-    turtle.forward(steps: 2 * scale)
-    turtle.right(by: 180)
-    sixPattern()
-    turtle.drawSelf()
-
-    // Middle sixPattern
-    turtle.forward(steps: 2 * scale)
-    turtle.left(by: 60)
-    sixPattern()
-    turtle.drawSelf()
-
-    // Righttop
-    turtle.forward(steps: 2 * scale)
-    turtle.left(by: 60)
-    sixPattern()
-    turtle.drawSelf()
-
-    // Right corner
-    turtle.right(by: 60)
-    turtle.forward(steps: 2 * scale)
-    turtle.right(by: 60)
-    sixPattern()
-    turtle.drawSelf()
 }
+
+// Repetition for the pattern vertically
+for _ in 1...3 {
+    
+}
+
+//// Get into position for next copy of pattern
+//turtle.forward(steps: 8 * scale)
+//wholePattern()
+//turtle.currentPosition()
+//turtle.currentHeading()
+//
+//// Get into position for the third copy of pattern
+//turtle.forward(steps: 8 * scale)
+
+
+canvas.highPerformance = false
