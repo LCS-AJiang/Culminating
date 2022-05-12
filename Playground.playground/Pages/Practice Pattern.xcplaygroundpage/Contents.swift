@@ -4,8 +4,8 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
-let preferredHeight = 600
+let preferredWidth = 1000
+let preferredHeight = 1000
 /*:
  ## Required code
  
@@ -38,7 +38,7 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: 50,
+canvas.translate(to: Point(x: 250,
                            y: canvas.height / 2))
 
 // Show a grid
@@ -145,7 +145,7 @@ func wholePattern() {
         turtle.currentPosition()
         turtle.currentHeading()
         sixPattern()
-        turtle.drawSelf()
+//        turtle.drawSelf()
         turtle.currentPosition()
         turtle.currentHeading()
 
@@ -154,26 +154,26 @@ func wholePattern() {
         turtle.forward(steps: 2 * scale)
         turtle.right(by: 180)
         sixPattern()
-        turtle.drawSelf()
+//        turtle.drawSelf()
 
         // Middle sixPattern
         turtle.forward(steps: 2 * scale)
         turtle.left(by: 60)
         sixPattern()
-        turtle.drawSelf()
+//        turtle.drawSelf()
 
         // Righttop
         turtle.forward(steps: 2 * scale)
         turtle.left(by: 60)
         sixPattern()
-        turtle.drawSelf()
+//        turtle.drawSelf()
 
         // Right corner
         turtle.right(by: 60)
         turtle.forward(steps: 2 * scale)
         turtle.right(by: 60)
         sixPattern()
-        turtle.drawSelf()
+//        turtle.drawSelf()
     }
     turtle.currentHeading()
     turtle.currentPosition()
@@ -186,12 +186,12 @@ func wholePattern() {
 canvas.highPerformance = true
 
 
-//// Draw the pattern
-//turtle.currentHeading()
-//turtle.currentPosition()
-//wholePattern()
-//turtle.currentPosition()
-//turtle.currentHeading()
+// Draw the pattern
+turtle.currentHeading()
+turtle.currentPosition()
+wholePattern()
+turtle.currentPosition()
+turtle.currentHeading()
 
 // Repetition for the pattern horizontally
 for _ in 1...3 {
@@ -204,10 +204,53 @@ for _ in 1...3 {
     turtle.currentHeading()
 }
 
-// Repetition for the pattern vertically
+
+turtle.drawSelf()
+
+// Second line of repetition
+turtle.forward(steps: -24 * scale)
+turtle.drawSelf()
+turtle.left(by: 90)
+turtle.drawSelf()
+turtle.forward(steps: 9 * scale)
+turtle.drawSelf()
+turtle.right(by: 90)
+wholePattern()
+
 for _ in 1...3 {
-    
+    // Draw the pattern
+    turtle.forward(steps: 8 * scale)
+    turtle.currentHeading()
+    turtle.currentPosition()
+    wholePattern()
+    turtle.currentPosition()
+    turtle.currentHeading()
 }
+// Third line of repetition
+turtle.forward(steps: -24 * scale)
+turtle.drawSelf()
+turtle.left(by: 90)
+turtle.drawSelf()
+turtle.forward(steps: 9 * scale)
+turtle.drawSelf()
+turtle.right(by: 90)
+wholePattern()
+
+for _ in 1...3 {
+    // Draw the pattern
+    turtle.forward(steps: 8 * scale)
+    turtle.currentHeading()
+    turtle.currentPosition()
+    wholePattern()
+    turtle.currentPosition()
+    turtle.currentHeading()
+}
+
+//// Repetition for the pattern vertically
+//for _ in 1...3 {
+//    turtle.forward(steps: -16 * scale)
+//
+//}
 
 //// Get into position for next copy of pattern
 //turtle.forward(steps: 8 * scale)
@@ -217,6 +260,5 @@ for _ in 1...3 {
 //
 //// Get into position for the third copy of pattern
 //turtle.forward(steps: 8 * scale)
-
 
 canvas.highPerformance = false
