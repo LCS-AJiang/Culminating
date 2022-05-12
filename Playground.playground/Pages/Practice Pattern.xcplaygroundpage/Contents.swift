@@ -193,6 +193,7 @@ wholePattern()
 turtle.currentPosition()
 turtle.currentHeading()
 
+
 // Repetition for the pattern horizontally
 for _ in 1...3 {
     // Draw the pattern
@@ -208,11 +209,11 @@ for _ in 1...3 {
 turtle.drawSelf()
 
 // Second line of repetition
-turtle.forward(steps: -24 * scale)
+turtle.forward(steps: -20 * scale)
 turtle.drawSelf()
 turtle.left(by: 90)
 turtle.drawSelf()
-turtle.forward(steps: 9 * scale)
+turtle.forward(steps: 7 * scale - scale/10)
 turtle.drawSelf()
 turtle.right(by: 90)
 wholePattern()
@@ -227,11 +228,11 @@ for _ in 1...3 {
     turtle.currentHeading()
 }
 // Third line of repetition
-turtle.forward(steps: -24 * scale)
+turtle.forward(steps: -28 * scale)
 turtle.drawSelf()
 turtle.left(by: 90)
 turtle.drawSelf()
-turtle.forward(steps: 9 * scale)
+turtle.forward(steps: 7 * scale - scale/10)
 turtle.drawSelf()
 turtle.right(by: 90)
 wholePattern()
