@@ -42,7 +42,7 @@ canvas.translate(to: Point(x: 250,
                            y: canvas.height / 2))
 
 // Show a grid
-canvas.drawAxes(withScale: true, by: 30, color: .black)
+//canvas.drawAxes(withScale: true, by: 30, color: .black)
 
 // Set a scale
 let scale = 30
@@ -107,7 +107,7 @@ func threeRepeatsOfPattern() {
     turtle.currentPosition()
     turtle.currentHeading()
     sixPattern()
-    turtle.drawSelf()
+//    turtle.drawSelf()
     turtle.currentPosition()
     turtle.currentHeading()
 
@@ -116,26 +116,27 @@ func threeRepeatsOfPattern() {
     turtle.forward(steps: 2 * scale)
     turtle.right(by: 180)
     sixPattern()
-    turtle.drawSelf()
+//    turtle.drawSelf()
 
     // Middle sixPattern
     turtle.forward(steps: 2 * scale)
     turtle.left(by: 60)
     sixPattern()
-    turtle.drawSelf()
+//    turtle.drawSelf()
 
     // Righttop
     turtle.forward(steps: 2 * scale)
     turtle.left(by: 60)
     sixPattern()
-    turtle.drawSelf()
+//    turtle.drawSelf()
 
     // Right corner
     turtle.right(by: 60)
     turtle.forward(steps: 2 * scale)
     turtle.right(by: 60)
     sixPattern()
-    turtle.drawSelf()
+//    turtle.drawSelf()
+    turtle.penUp()
 }
 
 func wholePattern() {
@@ -179,7 +180,7 @@ func wholePattern() {
     turtle.currentPosition()
     turtle.left(by: -32040)
     turtle.currentHeading()
-
+    turtle.penUp()
 }
 
 // Make repetition for the pattern
@@ -192,6 +193,7 @@ turtle.currentPosition()
 wholePattern()
 turtle.currentPosition()
 turtle.currentHeading()
+turtle.penUp()
 
 
 // Repetition for the pattern horizontally
@@ -203,20 +205,22 @@ for _ in 1...3 {
     wholePattern()
     turtle.currentPosition()
     turtle.currentHeading()
+    turtle.penUp()
 }
 
 
-turtle.drawSelf()
+//turtle.drawSelf()
 
 // Second line of repetition
 turtle.forward(steps: -20 * scale)
-turtle.drawSelf()
+//turtle.drawSelf()
 turtle.left(by: 90)
-turtle.drawSelf()
+//turtle.drawSelf()
 turtle.forward(steps: 7 * scale - scale/10)
-turtle.drawSelf()
+//turtle.drawSelf()
 turtle.right(by: 90)
 wholePattern()
+turtle.penUp()
 
 for _ in 1...3 {
     // Draw the pattern
@@ -229,13 +233,14 @@ for _ in 1...3 {
 }
 // Third line of repetition
 turtle.forward(steps: -28 * scale)
-turtle.drawSelf()
+//turtle.drawSelf()
 turtle.left(by: 90)
-turtle.drawSelf()
+//turtle.drawSelf()
 turtle.forward(steps: 7 * scale - scale/10)
-turtle.drawSelf()
+//turtle.drawSelf()
 turtle.right(by: 90)
 wholePattern()
+turtle.penUp()
 
 for _ in 1...3 {
     // Draw the pattern
@@ -245,6 +250,7 @@ for _ in 1...3 {
     wholePattern()
     turtle.currentPosition()
     turtle.currentHeading()
+    turtle.penUp()
 }
 
 canvas.highPerformance = false
